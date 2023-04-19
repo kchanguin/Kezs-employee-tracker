@@ -22,8 +22,19 @@ console.log("Now connected to a database! yay!");
 
 function start() {
     inquirer
-      prompt: "type"
-      list:
+      .prompt: ({
+        type: "list",
+        name: "action",
+        message: "What do you prefer to do?",
+        choices: [
+          "View all departments",
+          "View all roles",
+          "View all employees",
+          "Add a department",
+          "Add a role",
+          "Add an employee",
+          "Add a Manager",
+          "Update an employee role",
 
 
 
@@ -31,4 +42,18 @@ function start() {
 
 
 
-};
+
+
+
+        ]
+
+
+
+
+
+
+
+
+
+
+      })
